@@ -1,0 +1,149 @@
+/* Default Styling */
+/* Name (Mohit Naskar) positioned in the top-left corner */
+body, h1, h2, h3, p, a, li, button {
+    color: white !important;
+}
+header h1 {
+    font-weight: 400;
+    font-size: 1.5rem; /* Adjust size */
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    margin: 0;
+    color: white;
+}
+
+/* Position the tagline in the top center */
+header p {
+    font-size: 20px;
+    position: absolute;
+    top: 40px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it */
+    margin: 0;
+    font-weight: 200; /* Make it thinner */
+    /*-size: 1rem;*/ /* Adjust size */
+    color: white;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Full-screen sections */
+.full-page {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Intro Section */
+#intro {
+        background: url('Images/bgImages/Gemini_Generated_Image_ehl7aqehl7aqehl7.jpeg') no-repeat center center;
+        background-size: cover; /* Ensures full-screen coverage */
+        background-position: center;
+        background-attachment: fixed; /* Optional: Keeps it fixed while scrolling */
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+}
+
+/* Projects Section */
+#projects {
+    background:black;
+    padding: 50px;
+}
+
+/* Menu Button */
+.navbar {
+    position: fixed;
+    top: 2px;
+    right: 20px;
+}
+
+.menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Hidden Menu */
+/* Menu (Hidden by default) */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    background: #333;
+    border-radius: 5px;
+    display: none; /* Hidden initially */
+    position: absolute;
+    right: 0;
+    top: 40px; /* Position below the button */
+    width: 150px; /* Set a fixed width */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Show menu when active */
+.menu.show {
+    display: flex;
+    flex-direction: column; /* Ensure vertical layout */
+}
+
+/* Menu items */
+.menu li {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light divider */
+}
+
+/* Last item should not have a border */
+.menu li:last-child {
+    border-bottom: none;
+}
+
+/* Menu links */
+.menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    margin-top: 20px;
+}
