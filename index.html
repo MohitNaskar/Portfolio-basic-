@@ -12,34 +12,114 @@
     <!-- Page 1: Intro Section -->
     <section id="intro" class="full-page">
         <header>
+            <div class="scroll-bar"></div> <!-- Progress bar at the top -->
             <h1>Mohit Naskar</h1>
             <p>Aspiring Techie & Developer | AI & ML Enthusiast</p>
+            <div class="header-buttons">
+                <a href="mailto:mohitnaskar02@gmail.com" class="contact-button">Contact</a>
+                <button class="menu-btn">☰</button>
+                <ul class="menu" id="menu">
+                    <li><a href="#intro">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </header>
-        <nav class="navbar">
-            <button class="menu-btn">☰</button>
-            <ul class="menu" id="menu">
-                <li><a href="#intro">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
         <div class="intro-content">
             <h2>Hello World</h2>
-            <p>Currently working at SAP Labs India, passionate about AI, ML, and exploring different domains in tech. Open to collaborating with startups and companies of all scales.</p>
-            <button onclick="scrollToProjects()">View Projects</button>
+            <h3>I'm Mohit Naskar</h3>
+            <p>currently working at SAP Labs India, passionate about AI, ML, and exploring different domains in tech. Open to collaborating with startups and companies of all scales.</p>
         </div>
     </section>
 
-    <!-- Page 2: Projects Section -->
-    <section id="projects" class="full-page">
-        <h2>Projects</h2>
-        <div class="project">
+
+     <!-- Page 2: what do I do-->
+    <section id="page2" class="full-page">
+        <h1>What I do</h1>
+        <h2>What tech stack are known by me and how I work?</h2>
+
+        <div class="work-box">
+            <h2>How I work!</h2>
+            <p><strong>Define the core problem:</strong> What issue are you trying to solve?</p>
+            <p><strong>Identify users and needs:</strong> Who will use it and why?</p>
+            <p><strong>Break down features:</strong> List key functionalities.</p>
+            <p><strong>Prioritize features:</strong> MVP vs. future additions.</p>
+            <p><strong>Technology stack:</strong> Choose languages, frameworks, etc.</p>
+            <p><strong>Design architecture:</strong> How will components interact?</p>
+            <p><strong>Development plan:</strong> Sprints, milestones, deadlines.</p>
+            <p><strong>Testing and QA:</strong> Ensure quality and functionality.</p>
+            <p><strong>Deployment:</strong> Get your software to users.</p>
+            <p><strong>Iteration and feedback:</strong> Continuously improve based on user input.</p>
+        </div>
+
+        <div class="tech-box">
+            <h2>What tech stack do I know?</h2>
+            <div class="tech-category">
+                <h2>Languages</h2>
+                <div class="tech-buttons">
+                    <a href="https://www.python.org/" target="_blank" class="tech-btn">Python</a>
+                    <a href="https://www.java.com/" target="_blank" class="tech-btn">Java</a>
+                    <a href="https://www.sap.com/india/products/technology-platform/abap.html" target="_blank" class="tech-btn">ABAP</a>
+                    <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" class="tech-btn">C</a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="tech-btn">JavaScript</a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="tech-btn">HTML</a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="tech-btn">CSS</a>
+                </div>
+            </div>
+    
+            <div class="tech-category">
+                <h2>Frameworks</h2>
+                <div class="tech-buttons">
+                    <a href="https://spring.io/projects/spring-boot" target="_blank" class="tech-btn">Spring Boot</a>
+                    <a href="https://www.djangoproject.com/" target="_blank" class="tech-btn">Django</a>
+                    <a href="https://flask.palletsprojects.com/" target="_blank" class="tech-btn">Flask</a>
+                </div>
+            </div>
+    
+            <div class="tech-category">
+                <h2>Machine Learning Libraries</h2>
+                <div class="tech-buttons">
+                    <a href="https://numpy.org/" target="_blank" class="tech-btn">NumPy</a>
+                    <a href="https://scikit-learn.org/" target="_blank" class="tech-btn">Scikit-learn</a>
+                    <a href="https://pandas.pydata.org/" target="_blank" class="tech-btn">Pandas</a>
+                    <a href="https://www.tensorflow.org/" target="_blank" class="tech-btn">TensorFlow</a>
+                    <a href="https://seaborn.pydata.org/" target="_blank" class="tech-btn">Seaborn</a>
+                    <a href="https://github.com/Theano/Theano" target="_blank" class="tech-btn">Theano</a>
+                    <a href="https://keras.io/" target="_blank" class="tech-btn">Keras</a>
+                    <a href="https://pytorch.org/" target="_blank" class="tech-btn">PyTorch</a>
+                    <a href="https://matplotlib.org/" target="_blank" class="tech-btn">Matplotlib</a>
+                </div>
+            </div>
+    
+            <div class="tech-category">
+                <h2>Databases</h2>
+                <div class="tech-buttons">
+                    <a href="https://www.mysql.com/" target="_blank" class="tech-btn">SQL</a>
+                    <a href="https://www.sap.com/india/products/erp/s4hana.html" target="_blank" class="tech-btn">S4HANA</a>
+                    <a href="https://www.mongodb.com/" target="_blank" class="tech-btn">MongoDB</a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/MohitNaskar" target="_blank" class="works-btn-git">Works</a>
+    </section>
+    
+
+    <!-- Page 3: Projects Section -->
+    <section id="project1" class="full-page">
+        <h1>Projects</h1>
+        <img src="Images/bgImages/project1ss.png" alt="Movie Recommender System" class="project-image">
+        <div class="project1">
             <h3>Movie Recommender System</h3>
             <p>A machine learning-based recommendation system using NLP, sentiment analysis, and various recommendation algorithms.</p>
-            <a href="https://movierecommender-ge7zcwnknapdue4zxtqjrk.streamlit.app/" target="_blank">Live Demo</a>
+            <a href="https://movierecommender-ge7zcwnknapdue4zxtqjrk.streamlit.app/" target="_blank">Application Link</a>
             <a href="https://github.com/MohitNaskar" target="_blank">GitHub Repo</a>
         </div>
-        <div class="project">
+    </section>
+
+
+    /*-- page 4: Project 2 section --*/
+    <section id="project2" class="full-page">
+        <div class="project2">
             <h3>E-Commerce AI-ML <span class="wip">(Work in Progress)</span></h3>
             <p>An AI-ML integrated e-commerce website with advanced data analytics and automation.</p>
             <a href="https://github.com/MohitNaskar/E-Commerce_AI-ML" target="_blank">GitHub Repo</a>
@@ -47,8 +127,20 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Mohit Naskar. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-buttons">
+                <a href="https://www.linkedin.com/in/mohit-naskar-a595201a6" target="_blank" class="footer-btn">LinkedIn</a>
+                <a href="https://github.com/MohitNaskar" target="_blank" class="footer-btn">GitHub</a>
+                <a href="Mohit_NaskarCV.pdf" download class="footer-btn">Resume</a>
+            </div>
+            <div class="footer-buttons2">
+                <button id="prev-btn" class="footer-btn" onclick="navigatePage(-1)">Previous</button>
+                <button id="next-btn" class="footer-btn" onclick="navigatePage(1)">Next</button>
+            </div>
+            <p class="footer-text">&copy; 2025 Mohit Naskar. All rights reserved.</p>
+        </div>
     </footer>
+    
 
 </body>
 </html>

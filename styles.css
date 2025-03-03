@@ -1,5 +1,118 @@
 /* Default Styling */
-/* Name (Mohit Naskar) positioned in the top-left corner */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fix the header at the top */
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread items */
+    z-index: 1000;
+    flex-direction: column;
+}
+
+/* Scroll Progress Bar */
+.scroll-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(to right, white, black); /* Smooth color transition */
+    transition: width 0.1s linear;
+}
+
+/* Header Buttons Container */
+/* Header Buttons Container */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between Contact and Menu */
+    position: absolute;
+    right: 75px; /* Moves menu button to the extreme right */
+    top: 30px;
+}
+
+/* Contact Button */
+.contact-button {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Menu Button (Hamburger) */
+.menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menu (Dropdown) */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    /* background: rgba(0, 0, 0, 0.6); */
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    width: 150px;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+}
+
+/* Show Menu */
+.menu.show {
+    display: flex;
+}
+
+/* Menu Links */
+.menu li {
+    padding: 10px;
+    text-align: center;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+
+/* Add padding to body so content doesn’t go under the fixed header */
+body {
+    padding-top: 60px; /* Adjust this based on the header height */
+    padding-bottom: 50px;
+}
+
 body, h1, h2, h3, p, a, li, button {
     color: white !important;
 }
@@ -27,6 +140,27 @@ header p {
     text-align: center;
 }
 
+.intro-content h2 {
+    top :30px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.intro-content h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Position the button at the bottom center */
+.intro-content button {
+    position: absolute;
+    bottom: 80px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -47,7 +181,7 @@ body {
 
 /* Intro Section */
 #intro {
-        background: url('Images/bgImages/Gemini_Generated_Image_ehl7aqehl7aqehl7.jpeg') no-repeat center center;
+        background: url('Images/bgImages/Gemini_Generated_Image_meh1udmeh1udmeh1.jpeg') no-repeat center center;
         background-size: cover; /* Ensures full-screen coverage */
         background-position: center;
         background-attachment: fixed; /* Optional: Keeps it fixed while scrolling */
@@ -57,6 +191,26 @@ body {
         align-items: center;
         justify-content: center;
         text-align: center;
+}
+
+/* Position Contact button separately */
+.contact-button {
+    position: fixed;
+    top: 35px;
+    right: 105px; /* Move it to the left of the menu button */
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.contact-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Projects Section */
@@ -86,12 +240,12 @@ body {
     list-style: none;
     padding: 0;
     margin: 10px 0 0;
-    background: #333;
+    background: none;/*rgba(0, 0, 0, 0.6);*/
     border-radius: 5px;
     display: none; /* Hidden initially */
     position: absolute;
     right: 0;
-    top: 40px; /* Position below the button */
+    top: 50px; /* Position below the button */
     width: 150px; /* Set a fixed width */
     flex-direction: column; /* Stack items vertically */
 }
@@ -106,7 +260,7 @@ body {
 .menu li {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light divider */
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light divider */
 }
 
 /* Last item should not have a border */
@@ -123,7 +277,7 @@ body {
 }
 
 
-/* Button Styling */
+/* Button Styling
 button {
     padding: 10px 20px;
     font-size: 18px;
@@ -137,13 +291,323 @@ button {
 
 button:hover {
     background-color: #005bb5;
+} */
+
+/*Page 2*/
+/* Page 2 Styling */
+#page2 {
+    height: 100vh; /* Full-screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align headers to the left */
+    justify-content: flex-start; /* Align content to the top */
+    text-align: left;
+    padding: 80px 50px; /* Adjust top and left spacing */
+    background: url('Images/bgImages/Gemini_Generated_Image_pbh6fwpbh6fwpbh6.jpeg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+#page2 h1 {
+    font-size: 2.0rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+/* Page 2 work box*/
+.work-box {
+    background: rgba(0, 0, 0, 0.5); /* Translucent background */
+    padding: 15px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
+/* Box Styling (Shifted to the Right) */
+.tech-box {
+    background: rgba(0, 0, 0, 0.7); /* Translucent black */
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+    margin-top: 20px;
+    position: absolute;
+    top: 35%;
+    right: 80px; /* Adjust distance from the right */
+    transform: translateY(-50%); /* Center vertically */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Category Styling */
+.tech-category h2 {
+    margin-bottom: 10px;
+    color: #00d4ff; /* Highlighted category text */
+}
+
+/* Buttons Container */
+.tech-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Button Styling */
+.tech-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.tech-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #page2 {
+        padding: 50px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .tech-box {
+        width: 90%; /* Adjust width for smaller screens */
+        right: 5%; /* Shift closer to center */
+        transform: translateY(-50%);
+    }
+
+    .tech-buttons {
+        justify-content: center;
+    }
+}
+
+/*Git button in second page*/
+/* Works Button (Only for Page 2) */
+#page2 .works-btn-git {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
     background-color: #0073e6;
     color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    display: none; /* Hidden by default */
+}
+
+/* Hover Effect */
+#page2 .works-btn-git:hover {
+    background-color: #005bb5;
+}
+
+/* Show the button only when on Page 2 */
+body.page2-active #page2 .works-btn-git {
+    display: block;
+}
+
+/*Project1 page*/
+/* Page 3: Project 1 Section */
+#project1 {
+    height: 100vh; /* Full-screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: black no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+/* Project 1 Box */
+.project1 {
+    background: rgba(0, 0, 0, 0.7); /* Translucent background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 700px;
     margin-top: 20px;
+}
+
+/* Move h1 to the Top Left */
+
+/* Ensure h1 is visible and positioned correctly */
+.project-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 36px; /* Bigger size for visibility */
+    font-weight: bold;
+    color: white; /* Make sure text is visible */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    background: rgba(0, 0, 0, 0.5); /* Optional: add contrast if needed */
+    padding: 5px;
+    margin: 0;
+}
+
+/* Make sure #project1 has proper height and visibility */
+#project1 {
+    height: 100vh; /* Full-page height */
+    position: relative; /* Needed for absolute positioning of h1 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: black;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+/* Project Image Styling */
+.project-image {
+    margin-top: 10px;
+    width: 900px; /* Adjust size */
+    height: auto;
+    margin: 20px 0; /* Space between h1 and h3 */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-image {
+        width: 80%; /* Adjust for smaller screens */
+    }
+}
+
+/* Project Title */
+.project1 h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00d4ff;
+}
+
+/* Project Description */
+.project1 p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Buttons (Application & GitHub) */
+.project1 a {
+    display: inline-block;
+    text-decoration: none;
+    background: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.project1 a:hover {
+    background: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project1 {
+        width: 90%;
+    }
+}
+
+
+/* Footer */
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Translucent background */
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+/* Footer container for buttons & text */
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents items from wrapping */
+    max-width: 95vw; /* Ensures content doesn't exceed the screen width */
+    margin: 0 auto;
+}
+
+/* Footer button container (left-aligned) */
+.footer-buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    flex-shrink: 0; /* Prevents buttons from shrinking */
+}
+.footer-buttons2 {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the buttons */
+    display: flex;
+    gap: 15px; /* Space between Next & Previous buttons */
+}
+
+
+/* Footer buttons */
+.footer-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 15px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+/* Hover effect */
+.footer-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Hide buttons initially */
+#prev-btn, #next-btn {
+    display: none;
+}
+
+/* Footer text (right-aligned & prevents overflow) */
+.footer-text {
+    text-align: right;
+    flex-grow: 1; /* Pushes text to the right */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50%; /* Limits width to prevent overflow */
 }
