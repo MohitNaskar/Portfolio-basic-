@@ -8,51 +8,62 @@
 });
 
 
-//menu button logic
 document.addEventListener("DOMContentLoaded", function () {
     const menu = document.getElementById("menu");
     const menuBtn = document.querySelector(".menu-btn");
+    const menuLinks = document.querySelectorAll(".menu a"); // Select all menu links
 
+    if (!menu || !menuBtn) return; // Exit if elements are missing
+
+    // Toggle menu on button click
     function toggleMenu() {
         menu.classList.toggle("show");
     }
 
+    // Close menu when clicking outside
     function closeMenu(event) {
         if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
             menu.classList.remove("show");
         }
     }
 
+    // Close menu when clicking any menu link
+    menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("show");
+        });
+    });
+
     menuBtn.addEventListener("click", toggleMenu);
     document.addEventListener("click", closeMenu);
 
-    // Dynamically update the menu based on the visible section
+    // Dynamically update menu visibility based on scroll position
     function updateMenu() {
         const aboutSection = document.getElementById("intro");
-        const projectsSection = document.getElementById("projects");
+        const projectsSection = document.getElementById("project1");
 
         const aboutLink = document.querySelector(".menu a[href='#intro']");
-        const projectsLink = document.querySelector(".menu a[href='#projects']");
+        const projectsLink = document.querySelector(".menu a[href='#project1']");
+
+        if (!aboutSection || !projectsSection || !aboutLink || !projectsLink) return; // Exit if elements are missing
 
         const scrollPosition = window.scrollY;
 
         if (scrollPosition >= aboutSection.offsetTop && scrollPosition < projectsSection.offsetTop) {
             // Hide "About" when in About section
-            if (aboutLink) aboutLink.style.display = "none";
-            if (projectsLink) projectsLink.style.display = "block";
+            aboutLink.style.display = "none";
+            projectsLink.style.display = "block";
         } else if (scrollPosition >= projectsSection.offsetTop) {
             // Hide "Projects" when in Projects section
-            if (projectsLink) projectsLink.style.display = "none";
-            if (aboutLink) aboutLink.style.display = "block";
+            projectsLink.style.display = "none";
+            aboutLink.style.display = "block";
         }
     }
 
-    // Run function on scroll
     window.addEventListener("scroll", updateMenu);
-
-    // Run once on page load to set initial state
-    updateMenu();
+    updateMenu(); // Run once on page load
 });
+
 function scrollToPage2() {
     document.getElementById("page2").scrollIntoView({ behavior: "smooth" });
 }
