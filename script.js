@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Footer Buttons */
 document.addEventListener("DOMContentLoaded", function () {
-    const pages = ["intro", "page2","project1","project2"]; // Ordered page IDs
+    const pages = ["intro", "page2","project1","page4"]; // Ordered page IDs
     let currentPageIndex = 0;
 
     function updateButtons() {

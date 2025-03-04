@@ -2,7 +2,7 @@
 html {
     scroll-behavior: smooth;
 }
-
+/* Ensure there's no unwanted spacing */
 
 /* Fix the header at the top */
 /* Header Styling */
@@ -30,6 +30,72 @@ header {
     height: 5px;
     background: linear-gradient(to right, white, black); /* Smooth color transition */
     transition: width 0.1s linear;
+}
+.intro-content h3 {
+    text-align: left;
+    margin-left: -35px;
+}
+.intro-content h2{
+    text-align: left;
+    margin-left: 20px;
+}
+/* Experience Section */
+.experience-box {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 1%;
+    border-radius: 5%;
+    margin-top: 35px;
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Experience Container (Side by Side Layout) */
+.experience-container {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    gap: 20px; /* Space between boxes */
+}
+
+/* Individual Experience Item */
+.experience-item {
+    flex: 1; /* Make both sections equal in width */
+    padding: 5px;
+    border-left: 4px solid #00d4ff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Experience Titles */
+.experience-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Experience Company Name */
+.experience-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #00d4ff;
+}
+
+/* Ensure Side by Side Layout on All Screen Sizes */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-wrap: wrap; /* Prevents stacking */
+        justify-content: center; /* Centers items */
+    }
+
+    .experience-item {
+        width: 48%; /* Keeps them side by side on small screens */
+    }
+}
+.intro-content{
+    margin-top: 5%;
 }
 
 /* Header Buttons Container */
@@ -528,6 +594,49 @@ body.page2-active #page2 .works-btn-git {
     border: 2px solid #0073e6;
 }
 
+/* Tech Stack Box - Positioned on the Right */
+.tech-stack-box {
+    position: absolute;
+    top: 50%;
+    right: 60px; /* Aligns it to the right */
+    transform: translateY(-50%); /* Centers it vertically */
+    background: rgba(0, 0, 0, 0.5); /* Dark background */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Tech Stack Title */
+.tech-stack-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00d4ff;
+}
+
+/* Tech Stack List */
+.tech-stack-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tech-stack-box li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Responsive Design: Adjust for Small Screens */
+@media (max-width: 1024px) {
+    .tech-stack-box {
+        position: static; /* Move to normal flow on smaller screens */
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .background-container {
@@ -556,7 +665,89 @@ body.page2-active #page2 .works-btn-git {
     }
 }
 
-/* Style the Application & GitHub Links as Buttons */
+#page4{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+#page4 h1 ,
+#page4 h2 {
+    margin-top: 0;
+    padding-top: 1%;
+}   
+
+/* Page 4: Split Past & Upcoming Projects */
+.projects-container {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    height: 80vh; /* Full screen height */
+}
+
+/* Left Section: Past Projects */
+.past-projects {
+    margin-top: 50px;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 40px;
+    text-align: left;
+    border-right: 2px solid white;
+}
+
+/* Right Section: Upcoming Projects */
+.upcoming-projects {
+    width: 50%;
+    margin-top: 50px;
+    background: rgb(0, 0, 0);
+    color: black;
+    padding: 40px;
+    text-align: left;
+}
+
+/* Section Titles */
+.past-projects h2,
+.upcoming-projects h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* List Styling */
+.past-projects ul,
+.upcoming-projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.past-projects li,
+.upcoming-projects li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Responsive Design: Stack Sections on Smaller Screens */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .past-projects,
+    .upcoming-projects {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid white;
+        padding: 20px;
+    }
+}
+
 
 /* Footer */
 /* Footer styling */
