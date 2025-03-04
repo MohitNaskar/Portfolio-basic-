@@ -3,6 +3,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 /* Fix the header at the top */
 /* Header Styling */
 header {
@@ -67,25 +68,20 @@ header {
     color: white;
 }
 
-/* Menu (Dropdown) */
 .menu {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    /* background: rgba(0, 0, 0, 0.6); */
-    border-radius: 5px;
     display: none;
     position: absolute;
+    top: 50px;
     right: 20px;
-    top: 60px;
-    width: 150px;
-    flex-direction: column;
-    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
 }
 
-/* Show Menu */
 .menu.show {
     display: flex;
+    flex-direction: column;
 }
 
 /* Menu Links */
@@ -417,122 +413,150 @@ button:hover {
 body.page2-active #page2 .works-btn-git {
     display: block;
 }
+/*page3*/
 
-/*Project1 page*/
-/* Page 3: Project 1 Section */
+/* Ensure #project1 fills the full page and positions elements properly */
 #project1 {
-    height: 100vh; /* Full-screen height */
+    position: relative;
+    height: 100vh; /* Full screen height */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 50px 20px;
-    background: black no-repeat center center;
-    background-size: cover;
+    background: black;
+
+}
+
+/* Small Text Box - "How the application looks" */
+/* Small Text Box - "How the application looks" in Two Lines */
+.app-preview-text {
+    background: rgba(255, 255, 255, 0.2); /* Light translucent background */
     color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    left: -15%; /* Moves it to the left of the image */
+    top: 50%;
+    transform: translateY(-50%); /* Centers it vertically */
+    width: 120px; /* Restricts width to force text wrapping */
+    white-space: normal; /* Allows text to wrap */
+    line-height: 1.4; /* Adjusts spacing between lines */
 }
 
-/* Project 1 Box */
-.project1 {
-    background: rgba(0, 0, 0, 0.7); /* Translucent background */
-    padding: 20px;
-    border-radius: 10px;
-    width: 60%;
-    max-width: 700px;
-    margin-top: 20px;
+
+/* Background Image (Centered, Not Covering Full Screen) */
+.background-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; /* Adjust width */
+    height: 70%; /* Adjust height */
+    background: url('Images/bgImages/Posters.jpg') no-repeat center center;
+    background-size: contain; /* Ensures it doesn't cover the whole screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-/* Move h1 to the Top Left */
-
-/* Ensure h1 is visible and positioned correctly */
+/* Move h1 to the top-left corner */
 .project-title {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 36px; /* Bigger size for visibility */
-    font-weight: bold;
-    color: white; /* Make sure text is visible */
-    z-index: 1000; /* Ensure it's on top of other elements */
-    background: rgba(0, 0, 0, 0.5); /* Optional: add contrast if needed */
-    padding: 5px;
+    top: 85px;
+    left: 20px;
+    font-size: 36px;
+    font-weight: 300;
+    color: white;
+    z-index: 1000;
     margin: 0;
 }
 
-/* Make sure #project1 has proper height and visibility */
-#project1 {
-    height: 100vh; /* Full-page height */
-    position: relative; /* Needed for absolute positioning of h1 */
+/* Flex container for image and project details */
+.project-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 20px;
-    background: black;
-    background-size: cover;
-    color: rgb(0, 0, 0);
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Places image on left, text on right */
+    width: 100%;
+    max-width: 1400px;
+    margin : 0 auto;
+    padding: 20px;
+    z-index: 2;
 }
 
-
-
-
-/* Project Image Styling */
+/* Image on the Left */
 .project-image {
-    margin-top: 10px;
-    width: 900px; /* Adjust size */
+    width: 60%; /* Adjust size */
     height: auto;
-    margin: 20px 0; /* Space between h1 and h3 */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9);
+    border: solid 5px white; /* Thin border */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .project-image {
-        width: 80%; /* Adjust for smaller screens */
-    }
+/* Project Details on the Right */
+.project1 {
+    width: 60%;
+    background: black;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    color: white;
+    border: 2px solid white; /* Thin border */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Project Title */
-.project1 h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #00d4ff;
-}
-
-/* Project Description */
-.project1 p {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-/* Buttons (Application & GitHub) */
 .project1 a {
     display: inline-block;
     text-decoration: none;
-    background: #0073e6;
+    background: #0073e6; /* Blue button color */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 16px;
+    font-weight: bold;
     border-radius: 5px;
-    margin: 10px;
+    margin: 15px 10px 0 0; /* Space between buttons */
+    border: 2px solid transparent;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 
 /* Hover Effect */
 .project1 a:hover {
-    background: #005bb5;
+    background: white;
+    color: #0073e6;
+    border: 2px solid #0073e6;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .project1 {
+    .background-container {
         width: 90%;
+        height: 80%;
+    }
+
+    .project-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-image, .project1 {
+        width: 90%;
+    }
+    .app-preview-text {
+        position: static; /* Moves text above image on smaller screens */
+        transform: none;
+        margin-bottom: 10px;
+    }
+    .project1 a {
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin: 10px auto;
     }
 }
 
+/* Style the Application & GitHub Links as Buttons */
 
 /* Footer */
 /* Footer styling */
