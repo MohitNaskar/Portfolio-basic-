@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Footer Buttons */
 document.addEventListener("DOMContentLoaded", function () {
-    const pages = ["intro", "page2","project1","page4"]; // Ordered page IDs
+    const pages = ["intro", "page2","project1","page4","contact"]; // Ordered page IDs
     let currentPageIndex = 0;
 
     function updateButtons() {
@@ -128,4 +128,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Run detection on scroll and load
     window.addEventListener("scroll", detectCurrentPage);
     detectCurrentPage();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contact-form");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevents page reload
+
+            // Get form values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Simple validation
+            if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Simulate form submission
+            alert("Message sent successfully! Thank you for reaching out.");
+            contactForm.reset(); // Clears the form
+        });
+    }
 });

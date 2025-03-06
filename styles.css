@@ -692,7 +692,7 @@ body.page2-active #page2 .works-btn-git {
 
 /* Left Section: Past Projects */
 .past-projects {
-    margin-top: 50px;
+    margin-top: 10px;
     width: 50%;
     background: rgba(0, 0, 0, 0.8);
     color: white;
@@ -701,16 +701,104 @@ body.page2-active #page2 .works-btn-git {
     border-right: 2px solid white;
 }
 
+/* Flex Container for Image & GitHub Repo */
+.project-display {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 20px; /* Space between image and button */
+    margin-top: 1%;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    justify-content: space-between;
+}
+
+/* Project Image */
+.past-projects .project-image {
+    width: 70%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 0px;
+    display: block;
+}
+
+/* GitHub Repo Button */
+.past-projects .project-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents button from breaking into multiple lines */
+}
+
+.past-projects .project-link:hover {
+    background: white;
+    color: #0073e6;
+    border: 2px solid #0073e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-display {
+        flex-direction: column; /* Stack image & button vertically on small screens */
+        align-items: center;
+    }
+
+    .past-projects .project-image {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Increase size of the second image (Railway Reservation System) */
+.past-projects .railway-image {
+    width: 30%; /* Adjust as needed */
+    max-width: 350px; /* Bigger max width */
+    height: auto; /* Adjust height */
+    border-radius: 10px;
+    display: block;
+}
+
+
 /* Right Section: Upcoming Projects */
 .upcoming-projects {
     width: 50%;
-    margin-top: 50px;
+    margin-top: 10px;
     background: rgb(0, 0, 0);
     color: black;
     padding: 40px;
     text-align: left;
 }
 
+/* AI-ML E-Commerce Project Image */
+.upcoming-projects .ecommerce-image {
+    width: 60%; /* Adjust size as needed */
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* GitHub Repo Button */
+.upcoming-projects .project-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.upcoming-projects .project-link:hover {
+    background: white;
+    color: #0073e6;
+    border: 2px solid #0073e6;
+}
 /* Section Titles */
 .past-projects h2,
 .upcoming-projects h2 {
@@ -746,6 +834,79 @@ body.page2-active #page2 .works-btn-git {
         border-bottom: 2px solid white;
         padding: 20px;
     }
+    .upcoming-projects .ecommerce-image {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Contact Page Styling */
+#contact {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+/* Contact Form */
+#contact-form {
+    width: 50%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: white;
+    color: #0073e6;
+    border: 2px solid #0073e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-form {
+        width: 80%;
+    }
 }
 
 
@@ -756,7 +917,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Translucent background */
+    background-color: rgba(0, 0, 0, 0.0); /* Translucent background */
     color: white;
     padding: 10px 20px;
     font-size: 14px;
